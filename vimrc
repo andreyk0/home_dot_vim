@@ -21,9 +21,11 @@ set tags=tags
 ca rake make
 
 if filereadable("Rakefile")
- set makeprg=rake efm=%f:%l:%m
+ set makeprg=rake
+ set efm=%f:%l:%m
 else
- set makeprg=ant efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
+ set makeprg=ant
+ set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%A\ %#[scalac]\ %f:%l:\ %m,%-Z\ %#[scalac]\ %p^,%-C%.%#
 endif
 
 
