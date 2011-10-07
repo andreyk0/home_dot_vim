@@ -18,8 +18,14 @@ set tags=tags
 "set grepprg=git\ grep
 "
 "
-set makeprg=rake efm=%f:%l:%m
 ca rake make
+
+if filereadable("Rakefile")
+ set makeprg=rake efm=%f:%l:%m
+else
+ set makeprg=ant efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
+endif
+
 
 func GitGrep(...)
   let save = &grepprg
@@ -91,7 +97,7 @@ autocmd BufEnter *.xml set expandtab
 autocmd BufEnter *.tag set expandtab syntax=xml
 autocmd BufEnter *.json set expandtab syntax=json
 autocmd BufEnter *.ftl,*.macro set filetype=ftl noexpandtab
-autocmd BufEnter *.java set ts=4 sw=4 expandtab makeprg=ant efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
+autocmd BufEnter *.java set ts=4 sw=4 expandtab
 autocmd BufEnter *.jsp set ts=2 sw=2 expandtab
 autocmd BufEnter *.scala set ts=2 sw=2 expandtab
 autocmd BufEnter *.sql set ts=2 sw=2 expandtab
