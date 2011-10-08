@@ -15,13 +15,16 @@ set expandtab
 set tags=tags
 set foldmethod=indent
 set foldlevel=1
+
+colorscheme desert
+
 "set tags=$HOME/work/scala/.tags,$HOME/work/norbert/.tags,.tags
 "set so=15
 "set grepprg=git\ grep
 
-"if &term =~ "xterm"
-"  set t_Co=256
-"endif
+if &term =~ "xterm"
+  set t_Co=256
+endif
 
 ca rake make
 
