@@ -16,7 +16,7 @@ set tags=tags
 set foldmethod=indent
 set foldlevel=1
 
-colorscheme desert
+colorscheme osx
 
 "set tags=$HOME/work/scala/.tags,$HOME/work/norbert/.tags,.tags
 "set so=15
@@ -119,7 +119,6 @@ autocmd BufEnter Capfile set ts=2 sw=2 expandtab syntax=ruby
 augroup filetype
   au! BufRead,BufNewFile *.proto setfiletype proto
 augroup end
-
 
 
 " for solaris
