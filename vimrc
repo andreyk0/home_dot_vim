@@ -13,11 +13,16 @@ set ts=2
 set sw=2
 set expandtab
 set tags=tags
+set foldmethod=indent
+set foldlevel=1
 "set tags=$HOME/work/scala/.tags,$HOME/work/norbert/.tags,.tags
 "set so=15
 "set grepprg=git\ grep
-"
-"
+
+"if &term =~ "xterm"
+"  set t_Co=256
+"endif
+
 ca rake make
 
 if filereadable("Rakefile")
@@ -25,7 +30,9 @@ if filereadable("Rakefile")
  set efm=%f:%l:%m
 else
  set makeprg=ant
- set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%A\ %#[scalac]\ %f:%l:\ %m,%-Z\ %#[scalac]\ %p^,%-C%.%#
+ "set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%A\ %#[scalac]\ %f:%l:\ %m,%-Z\ %#[scalac]\ %p^,%-C%.%#
+ set efm=%W\ %#[scalac]\ %f:%l:\ warning:\ %m,%W\ %#[javac]\ %f:%l:\ warning:\ %m,%E\ %#[javac]\ %f:%l:\ %m,%E\ %#[scalac]\ %f:%l:\ error:\ %m
+ 
 endif
 
 
