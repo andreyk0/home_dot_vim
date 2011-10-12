@@ -28,13 +28,13 @@ endif
 
 ca rake make
 
-if filereadable("Rakefile")
- set makeprg=rake
- set efm=%f:%l:%m
-else
+if filereadable("build.xml")
   set makeprg=ant
   "set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%A\ %#[scalac]\ %f:%l:\ %m,%-Z\ %#[scalac]\ %p^,%-C%.%#
   set efm=%W\ %#[scalac]\ %f:%l:\ warning:\ %m,%W\ %#[javac]\ %f:%l:\ warning:\ %m,%E\ %#[javac]\ %f:%l:\ %m,%E\ %#[scalac]\ %f:%l:\ error:\ %m
+else
+ set makeprg=rake
+ set efm=%f:%l:%m
 endif
 
 
