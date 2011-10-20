@@ -34,7 +34,7 @@ if filereadable("build.xml")
   set efm=%W\ %#[scalac]\ %f:%l:\ warning:\ %m,%W\ %#[javac]\ %f:%l:\ warning:\ %m,%E\ %#[javac]\ %f:%l:\ %m,%E\ %#[scalac]\ %f:%l:\ error:\ %m
 else
  set makeprg=rake
- set efm=%f:%l:%m
+ set efm=%E%f:%l:\ error:\ %m,%W%f:%l:\ warning:\ %m
 endif
 
 
