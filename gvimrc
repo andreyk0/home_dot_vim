@@ -2,7 +2,7 @@ set guioptions=
 set lines=60
 set columns=151
 
-set gfn=Monaco:h18:a
+"set gfn=Monaco:h18:a
 
 
 func MaximizeVim()

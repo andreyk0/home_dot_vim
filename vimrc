@@ -60,6 +60,7 @@ autocmd BufEnter *.jsp set ts=2 sw=2 expandtab
 autocmd BufEnter *.scala set ts=2 sw=2 expandtab
 autocmd BufEnter *.sql set ts=2 sw=2 expandtab
 autocmd BufEnter *.rb set ts=2 sw=2 expandtab
+autocmd BufEnter *.nxc set filetype=nxc ts=2 sw=2 expandtab
 autocmd BufEnter Capfile set ts=2 sw=2 expandtab syntax=ruby
 
 augroup filetype
