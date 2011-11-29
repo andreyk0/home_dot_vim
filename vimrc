@@ -37,13 +37,13 @@ else
  set efm=%E%f:%l:\ error:\ %m,%W%f:%l:\ warning:\ %m
 endif
 
-
 imap <F1> <esc>
 map <F1> <esc>
 map <F2> <esc>:n **/*.scala<CR>:n **/*.java<CR><esc><esc>:silent! :bw \*\*\/\*\.java<CR><esc><esc>:silent! :bw \*\*\/\*\.scala<CR><esc>
 map <F3> <esc>:'<,'>w !pbcopy<CR>
 map <F4> <esc>:r!pbpaste<CR>
 vmap <F5> :!sort<CR>
+map <F6> <esc>:Shell git blame %<CR>
 
 set encoding=utf-8
 setglobal fileencoding=utf-8
