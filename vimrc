@@ -1,6 +1,15 @@
 set nocompatible
 
-syntax on
+syntax enable
+if has('gui_running')
+  set background=light
+else
+  set background=light
+endif
+set t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized
+
 filetype on
 filetype indent on
 filetype plugin on
@@ -16,15 +25,11 @@ set tags=tags
 set foldmethod=indent
 set foldlevel=1
 
-colorscheme osx
 
 "set tags=$HOME/work/scala/.tags,$HOME/work/norbert/.tags,.tags
 "set so=15
 "set grepprg=git\ grep
 
-if &term =~ "xterm"
-  set t_Co=256
-endif
 
 ca rake make
 

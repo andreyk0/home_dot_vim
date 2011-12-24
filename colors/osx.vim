@@ -1,5 +1,4 @@
 hi clear
-set background=light
 if exists("syntax_on")
   syntax reset
 endif
