@@ -32,7 +32,7 @@ if filereadable("build.xml")
   set makeprg=ant
   "set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%A\ %#[scalac]\ %f:%l:\ %m,%-Z\ %#[scalac]\ %p^,%-C%.%#
   set efm=%W\ %#[scalac]\ %f:%l:\ warning:\ %m,%W\ %#[javac]\ %f:%l:\ warning:\ %m,%E\ %#[javac]\ %f:%l:\ %m,%E\ %#[scalac]\ %f:%l:\ error:\ %m
-else
+elseif filereadable("Rakefile")
  set makeprg=rake
  set efm=%E%f:%l:\ error:\ %m,%W%f:%l:\ warning:\ %m
 endif
