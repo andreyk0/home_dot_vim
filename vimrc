@@ -24,6 +24,7 @@ set expandtab
 set tags=tags
 set foldmethod=indent
 set foldlevel=1
+set autoread
 
 
 "set tags=$HOME/work/scala/.tags,$HOME/work/norbert/.tags,.tags
