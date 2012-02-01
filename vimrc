@@ -51,6 +51,9 @@ map <F4> <esc>:r!pbpaste<CR>
 vmap <F5> :!sort<CR>
 map <F6> <esc>:Shell git blame %<CR>
 
+" disable 'ex' mode
+map Q <ESC>
+
 set encoding=utf-8
 setglobal fileencoding=utf-8
 
