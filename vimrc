@@ -59,12 +59,12 @@ setglobal fileencoding=utf-8
 
 autocmd BufEnter Makefile set noexpandtab
 autocmd BufEnter makefile set noexpandtab
-autocmd BufEnter *.h,*.m set expandtab ts=4 sw=4
+autocmd BufEnter *.h,*.m set expandtab
 autocmd BufEnter *.xml set expandtab
 autocmd BufEnter *.tag set expandtab syntax=xml
 autocmd BufEnter *.json set expandtab syntax=json
 autocmd BufEnter *.ftl,*.macro set filetype=ftl noexpandtab
-autocmd BufEnter *.java set ts=4 sw=4 expandtab
+autocmd BufEnter *.java set ts=2 sw=2 expandtab
 autocmd BufEnter *.jsp set ts=2 sw=2 expandtab
 autocmd BufEnter *.scala set ts=2 sw=2 expandtab
 autocmd BufEnter *.sql set ts=2 sw=2 expandtab
