@@ -28,3 +28,10 @@ function! Find(name)
   execute ":e ".l:line
 endfunction
 command! -nargs=1 O :call Find("<args>")
+
+
+func FindWord()
+  normal! "zyiw
+  call Find(getreg('z'))
+endf
+nmap <C-x>O :call FindWord()<CR>
