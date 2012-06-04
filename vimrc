@@ -72,6 +72,8 @@ autocmd BufEnter *.rb set ts=2 sw=2 expandtab
 autocmd BufEnter *.nxc set filetype=nxc ts=2 sw=2 expandtab
 autocmd BufEnter Capfile set ts=2 sw=2 expandtab syntax=ruby
 
+autocmd BufWritePre *.scala,*java,*.rb,*efile :%s/\s\+$//e
+
 augroup filetype
   au! BufRead,BufNewFile *.proto setfiletype proto
 augroup end
