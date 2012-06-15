@@ -34,7 +34,11 @@ set autoread
 
 ca rake make
 
-if filereadable("build.xml")
+if filereadable("build.sbt")
+  set makeprg=cat\ /tmp/sbt.errs
+  set efm=%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z, "\%W\ %#[warn]\ %f:%l:\ %m,%C\ %#[warn]\ %p^,%-C%.%#,%Z,
+         \%-G%.%#
+elseif filereadable("build.xml")
   set makeprg=ant
   "set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%A\ %#[scalac]\ %f:%l:\ %m,%-Z\ %#[scalac]\ %p^,%-C%.%#
   set efm=%W\ %#[scalac]\ %f:%l:\ warning:\ %m,%W\ %#[javac]\ %f:%l:\ warning:\ %m,%E\ %#[javac]\ %f:%l:\ %m,%E\ %#[scalac]\ %f:%l:\ error:\ %m
@@ -50,6 +54,7 @@ map <F3> <esc>:'<,'>w !tmux loadb -<CR>
 map <F4> <esc>:r!tmux showb<CR>
 vmap <F5> :!sort<CR>
 map <F6> <esc>:Shell git blame %<CR>
+map <F7> <esc>:make<CR><CR>
 
 " disable 'ex' mode
 map Q <ESC>
