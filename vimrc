@@ -26,6 +26,8 @@ set foldmethod=indent
 set foldlevel=1
 set autoread
 
+set winheight=10
+set winminheight=5
 
 "set tags=$HOME/work/scala/.tags,$HOME/work/norbert/.tags,.tags
 "set so=15
