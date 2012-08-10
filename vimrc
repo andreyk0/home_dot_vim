@@ -80,7 +80,7 @@ autocmd BufEnter *.sql set ts=2 sw=2 expandtab
 autocmd BufEnter *.tag set expandtab syntax=xml
 autocmd BufEnter *.xml set expandtab
 
-autocmd BufWritePre *.scala,*java,*.rb,*efile,*.hs :%s/\s\+$//e
+autocmd BufWritePre *.scala,*java,*.rb,*efile,*.hs,*.md :%s/\s\+$//e
 
 augroup filetype
   au! BufRead,BufNewFile *.proto setfiletype proto
