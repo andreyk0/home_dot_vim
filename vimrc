@@ -36,7 +36,7 @@ set winminheight=5
 
 ca rake make
 
-if filereadable("build.sbt")
+if filereadable("project/build.sbt")
   set makeprg=cat\ /tmp/sbt.errs
   set efm=%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z, "\%W\ %#[warn]\ %f:%l:\ %m,%C\ %#[warn]\ %p^,%-C%.%#,%Z,
          \%-G%.%#
