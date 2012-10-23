@@ -1,4 +1,5 @@
 set nocompatible
+set nowrap
 
 syntax enable
 if has('gui_running')
@@ -36,14 +37,14 @@ set winminheight=5
 
 ca rake make
 
-if filereadable("project/Build.scala")
+if filereadable("project/Build.scala") || filereadable("build.sbt")
   set makeprg=cat\ /tmp/sbt.errs
   set efm=%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z, "\%W\ %#[warn]\ %f:%l:\ %m,%C\ %#[warn]\ %p^,%-C%.%#,%Z,
          \%-G%.%#
-elseif filereadable("build.xml")
-  set makeprg=ant
-  "set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%A\ %#[scalac]\ %f:%l:\ %m,%-Z\ %#[scalac]\ %p^,%-C%.%#
-  set efm=%W\ %#[scalac]\ %f:%l:\ warning:\ %m,%W\ %#[javac]\ %f:%l:\ warning:\ %m,%E\ %#[javac]\ %f:%l:\ %m,%E\ %#[scalac]\ %f:%l:\ error:\ %m
+"elseif filereadable("build.xml")
+"  set makeprg=ant
+"  "set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%A\ %#[scalac]\ %f:%l:\ %m,%-Z\ %#[scalac]\ %p^,%-C%.%#
+"  set efm=%W\ %#[scalac]\ %f:%l:\ warning:\ %m,%W\ %#[javac]\ %f:%l:\ warning:\ %m,%E\ %#[javac]\ %f:%l:\ %m,%E\ %#[scalac]\ %f:%l:\ error:\ %m
 elseif filereadable("Rakefile")
  set makeprg=rake
  set efm=%E%f:%l:\ error:\ %m,%W%f:%l:\ warning:\ %m
