@@ -30,6 +30,9 @@ set autoread
 set winheight=10
 set winminheight=5
 
+set winwidth=120
+set winminwidth=60
+
 "set tags=$HOME/work/scala/.tags,$HOME/work/norbert/.tags,.tags
 "set so=15
 "set grepprg=git\ grep
