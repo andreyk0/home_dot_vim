@@ -89,6 +89,7 @@ autocmd BufWritePre *.scala,*java,*.rb,*efile,*.hs,*.md :%s/\s\+$//e
 augroup filetype
   au! BufRead,BufNewFile *.proto setfiletype proto
   au! BufRead,BufNewFile *.ngc setfiletype ngc
+  au! BufRead,BufNewFile *.sbt setfiletype scala
 augroup end
 
 
