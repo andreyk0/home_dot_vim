@@ -68,6 +68,12 @@ map Q <ESC>
 set encoding=utf-8
 setglobal fileencoding=utf-8
 
+augroup filetype
+  au! BufRead,BufNewFile,BufEnter *.proto setfiletype proto
+  au! BufRead,BufNewFile,BufEnter *.ngc setfiletype ngc
+  au! BufRead,BufNewFile,BufEnter *.sbt setfiletype scala
+augroup end
+
 autocmd BufEnter Capfile set ts=2 sw=2 expandtab syntax=ruby
 autocmd BufEnter *.ftl,*.macro set filetype=ftl noexpandtab
 autocmd BufEnter *.h,*.m set expandtab
@@ -83,31 +89,4 @@ autocmd BufEnter *.scala set ts=2 sw=2 expandtab
 autocmd BufEnter *.sql set ts=2 sw=2 expandtab
 autocmd BufEnter *.tag set expandtab syntax=xml
 autocmd BufEnter *.xml set expandtab
-
 autocmd BufWritePre *.scala,*java,*.rb,*efile,*.hs,*.md :%s/\s\+$//e
-
-augroup filetype
-  au! BufRead,BufNewFile *.proto setfiletype proto
-  au! BufRead,BufNewFile *.ngc setfiletype ngc
-  au! BufRead,BufNewFile *.sbt setfiletype scala
-augroup end
-
-
-" for solaris
-if $SOLARIS == 1
-    if &term =~ "xterm"
-      if has("terminfo")
-        set t_Co=8
-        set t_Sf=[3%p1%dm
-        set t_Sb=[4%p1%dm
-      else
-        set t_Co=8
-        set t_Sf=[3%dm
-        set t_Sb=[4%dm
-      endif
-    endif
-
-
-    set dictionary=/usr/share/lib/dict/words
-
-endif
