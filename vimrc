@@ -75,6 +75,7 @@ augroup filetype
   au! BufRead,BufNewFile,BufEnter *.proto setfiletype proto
   au! BufRead,BufNewFile,BufEnter *.ngc setfiletype ngc
   au! BufRead,BufNewFile,BufEnter *.sbt setfiletype scala
+  au! BufRead,BufNewFile *.scad set filetype=openscad 
 augroup end
 
 autocmd BufEnter Capfile set ts=2 sw=2 expandtab syntax=ruby
