@@ -59,8 +59,8 @@ endif
 imap <F1> <esc>
 map <F1> <esc>
 map <F2> <esc>:n **/*.scala<CR>:n **/*.java<CR><esc><esc>:silent! :bw \*\*\/\*\.java<CR><esc><esc>:silent! :bw \*\*\/\*\.scala<CR><esc>
-map <F3> <esc>:'<,'>w !tmux loadb -<CR>
-map <F4> <esc>:r!tmux showb<CR>
+map <F3> <esc>:'<,'>w !tmux -u loadb -<CR>
+map <F4> <esc>:r!tmux -u showb<CR>
 vmap <F5> :!sort<CR>
 map <F6> <esc>:Shell git blame %<CR>
 map <F7> <esc>:make<CR><CR>
