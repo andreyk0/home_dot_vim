@@ -1,6 +1,6 @@
 " Find file in current directory and edit it.
 function! Find(name)
-  let l:list=system("find . -path '*".a:name."*' -and -not -name '*.class' -and -not -name '*.swp' -and -not -path './*/target/*' -and -not -path './test-output/*' | perl -ne 'print \"$.\\t$_\"'")
+  let l:list=system("find . -path '*".a:name."*' -and -not -name '*.class' -and -not -name '*.swp' -and -not -path './target/*' -and -not -path './*/target/*' -and -not -path './test-output/*' | perl -ne 'print \"$.\\t$_\"'")
   let l:num=strlen(substitute(l:list, "[^\n]", "", "g"))
   if l:num < 1
     echo "'".a:name."' not found"
