@@ -34,4 +34,3 @@ func FindWord()
   normal! "zyiw
   call Find(getreg('z'))
 endf
-nmap <C-x>O :call FindWord()<CR>
