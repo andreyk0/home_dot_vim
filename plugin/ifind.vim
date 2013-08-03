@@ -10,7 +10,7 @@ function! IFind(path, name)
   endif
 endfunction
 
-command! -nargs=1 -complete=file O :call IFind("<args>", "")
+command! -nargs=1 -complete=file O :silent call IFind("<args>", "")
 
 func IFindWord()
   normal! "zyiw
