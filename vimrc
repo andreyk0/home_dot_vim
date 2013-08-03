@@ -58,7 +58,7 @@ endif
 
 imap <F1> <esc>
 map <F1> <esc>
-map <F2> <esc>:call IFind("") <CR><CR>
+map <F2> <esc>:call IFind(".","") <CR><CR>
 map <F3> <esc>:'<,'>w !tmux -u loadb -<CR>
 map <F4> <esc>:r!tmux -u showb<CR>
 vmap <F5> :!sort<CR>

@@ -27,7 +27,6 @@ function! Find(name)
   let l:line=substitute(l:line, "^[^\t]*\t./", "", "")
   execute ":e ".l:line
 endfunction
-command! -nargs=1 O :call Find("<args>")
 
 
 func FindWord()

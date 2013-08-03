@@ -1,7 +1,7 @@
 " Interactively find a set of files and open them
-function! IFind(name)
+function! IFind(path, name)
   let tmpFile=tempname()
-  execute ":! ifind -s '".a:name."' -o ".tmpFile
+  execute ":! ifind -i '".a:path."' -s '".a:name."' -o ".tmpFile
   if filereadable(tmpFile)
     for i in readfile(tmpFile)
       execute ":e ".i
@@ -10,7 +10,9 @@ function! IFind(name)
   endif
 endfunction
 
+command! -nargs=1 -complete=file O :call IFind("<args>", "")
+
 func IFindWord()
   normal! "zyiw
-  call IFind(getreg('z'))
+  call IFind(".", getreg('z'))
 endf
