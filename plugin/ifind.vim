@@ -4,7 +4,7 @@ function! IFind(path, name)
   execute ":! ifind -i '".a:path."' -s '".a:name."' -o ".tmpFile
   if filereadable(tmpFile)
     for i in readfile(tmpFile)
-      execute ":e ".i
+      execute ":e ".escape(i,' ')
     endfor
     call delete(tmpFile)
   endif
