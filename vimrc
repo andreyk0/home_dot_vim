@@ -87,7 +87,7 @@ autocmd BufEnter Makefile set noexpandtab
 autocmd BufEnter *.ftl,*.macro set filetype=ftl noexpandtab
 autocmd BufEnter *.h,*.m set expandtab
 autocmd BufEnter *.hsc set filetype=haskell
-autocmd BufEnter *.hs set ts=8 expandtab
+autocmd BufEnter *.hs set ts=2 expandtab
 autocmd BufEnter *.java set ts=2 sw=2 expandtab
 autocmd BufEnter *.json set expandtab syntax=json
 autocmd BufEnter *.jsp set ts=2 sw=2 expandtab
