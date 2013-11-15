@@ -40,6 +40,8 @@ set winminwidth=60
 "set so=15
 "set grepprg=git\ grep
 
+set colorcolumn=100
+
 
 ca rake make
 
