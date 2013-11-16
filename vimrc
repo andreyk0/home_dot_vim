@@ -52,7 +52,7 @@ set statusline+=%4*\ %04l/%03c\
 set statusline+=%2*\ 0x%04.4B\ 
 set statusline+=%5*\ %-3m\ 
 
-set fillchars+=stl:\|,stlnc:\|
+set fillchars+=stl:\_,stlnc:\_
 
 
 ca rake make
