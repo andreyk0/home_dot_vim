@@ -45,12 +45,15 @@ set colorcolumn=100
 ":he statusline
 set laststatus=2
 set statusline=
-set statusline+=%f
-set statusline+=%3*\ %{&fenc!=''?&fenc:&enc}\ 
-set statusline+=%1*\ %Y\ 
-set statusline+=%4*\ %04l/%03c\ 
-set statusline+=%2*\ 0x%04.4B\ 
-set statusline+=%5*\ %-3m\ 
+set statusline+=%#pmenu#
+set statusline+=%f\ 
+set statusline+=%#pmenusel#
+set statusline+=\ %{&fenc!=''?&fenc:&enc}\ 
+set statusline+=%Y\ 
+set statusline+=%04l/%03c\ 
+set statusline+=0x%04.4B\ 
+set statusline+=%*
+set statusline+=%-3m\ 
 
 set fillchars+=stl:\_,stlnc:\_
 
