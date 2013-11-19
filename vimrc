@@ -26,7 +26,7 @@ set tags=tags
 
 set foldmethod=indent
 set foldlevel=1
-set foldnestmax=2
+set foldnestmax=4
 
 set autoread
 
