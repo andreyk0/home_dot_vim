@@ -90,6 +90,10 @@ map Q <ESC>
 set encoding=utf-8
 setglobal fileencoding=utf-8
 
+
+let g:bufExplorerShowRelativePath=1  " Show relative paths.
+let g:bufExplorerSortBy='name'       " Sort by the buffer's name.
+
 augroup filetype
   au! BufRead,BufNewFile,BufEnter *.proto setfiletype proto
   au! BufRead,BufNewFile,BufEnter *.ngc setfiletype ngc
