@@ -110,7 +110,7 @@ autocmd BufEnter *.h,*.m set expandtab
 autocmd BufEnter *.hsc set filetype=haskell
 autocmd BufEnter *.hs set ts=2 expandtab
 autocmd BufEnter *.java set ts=2 sw=2 expandtab
-autocmd BufEnter *.json set expandtab syntax=json
+autocmd BufEnter *.json set expandtab syntax=json foldnestmax=16
 autocmd BufEnter *.jsp set ts=2 sw=2 expandtab
 autocmd BufEnter *.nxc set filetype=nxc ts=2 sw=2 expandtab
 autocmd BufEnter *.rb set ts=2 sw=2 expandtab
@@ -118,4 +118,5 @@ autocmd BufEnter *.scala set ts=2 sw=2 expandtab
 autocmd BufEnter *.sql set ts=2 sw=2 expandtab
 autocmd BufEnter *.tag set expandtab syntax=xml
 autocmd BufEnter *.xml set expandtab
+autocmd BufEnter *.avdl set filetype=avro-idl
 autocmd BufWritePre *.scala,*java,*.rb,*efile,*.hs,*.hsc,*.md :%s/\s\+$//e
