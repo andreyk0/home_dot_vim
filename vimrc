@@ -120,4 +120,4 @@ autocmd BufEnter *.tag set expandtab syntax=xml
 autocmd BufEnter *.xml set expandtab
 autocmd BufEnter *.avdl set filetype=avro-idl
 autocmd BufWritePre *.scala,*java,*.rb,*efile,*.hs,*.hsc,*.md :%s/\s\+$//e
-au BufRead,BufNewFile */nginx/** setfiletype nginx
+au BufRead,BufNewFile */nginx/** setfiletype nginx | set expandtab
