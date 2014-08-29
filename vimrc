@@ -111,6 +111,7 @@ autocmd BufEnter *.hsc set filetype=haskell
 autocmd BufEnter *.hs set ts=2 expandtab
 autocmd BufEnter *.java set ts=2 sw=2 expandtab
 autocmd BufEnter *.json set expandtab syntax=json foldnestmax=16
+autocmd BufEnter *.json map <F7> <esc>:%!jq .<CR><CR>
 autocmd BufEnter *.jsp set ts=2 sw=2 expandtab
 autocmd BufEnter *.nxc set filetype=nxc ts=2 sw=2 expandtab
 autocmd BufEnter *.rb set ts=2 sw=2 expandtab
