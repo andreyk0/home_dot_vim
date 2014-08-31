@@ -57,6 +57,7 @@ set statusline+=%-3m\
 
 set fillchars+=stl:\_,stlnc:\  
 
+set path=.,/usr/local/include,/usr/include,/usr/include/linux,/usr/include/x86_64-linux-gnu
 
 ca rake make
 
