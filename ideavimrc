@@ -1,0 +1,5 @@
+map <C-PageUp> gT
+imap <C-PageUp> gT
+
+map <C-PageDown> gt
+imap <C-PageDown> gt
