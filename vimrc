@@ -123,3 +123,12 @@ autocmd BufEnter *.xml set expandtab
 autocmd BufEnter *.avdl set filetype=avro-idl
 autocmd BufWritePre *.scala,*java,*.rb,*efile,*.hs,*.hsc,*.md :%s/\s\+$//e
 au BufRead,BufNewFile */nginx/** setfiletype nginx | set expandtab
+
+
+" Highlight whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
