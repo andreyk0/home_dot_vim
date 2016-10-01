@@ -25,8 +25,8 @@ set expandtab
 set tags=tags
 
 set foldmethod=indent
-set foldlevel=1
-set foldnestmax=4
+set foldlevel=10
+set foldnestmax=10
 
 set autoread
 
