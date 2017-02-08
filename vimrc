@@ -120,8 +120,7 @@ autocmd BufEnter *.sql set ts=2 sw=2 expandtab
 autocmd BufEnter *.tag set expandtab syntax=xml
 autocmd BufEnter *.xml set expandtab
 autocmd BufEnter *.avdl set filetype=avro-idl
-autocmd BufWritePre *.scala,*java,*.rb,*efile,*.hs,*.hsc,*.md :%s/\s\+$//e
-au BufRead,BufNewFile */nginx/** setfiletype nginx | set expandtab
+autocmd BufWritePre *.scala,*.rb,*efile,*.hs,*.hsc,*.md :%s/\s\+$//e
 
 
 " Highlight whitespace
