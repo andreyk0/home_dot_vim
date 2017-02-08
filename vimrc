@@ -99,7 +99,7 @@ augroup filetype
   au! BufRead,BufNewFile,BufEnter *.proto setfiletype proto
   au! BufRead,BufNewFile,BufEnter *.ngc setfiletype ngc
   au! BufRead,BufNewFile,BufEnter *.sbt setfiletype scala
-  au! BufRead,BufNewFile,BufEnter *.scad set filetype=openscad 
+  au! BufRead,BufNewFile,BufEnter *.scad set filetype=openscad
   au! BufRead,BufNewFile,BufEnter *.go set filetype=go
 augroup end
 
@@ -109,7 +109,7 @@ autocmd BufEnter Makefile set noexpandtab
 autocmd BufEnter *.ftl,*.macro set filetype=ftl noexpandtab
 autocmd BufEnter *.h,*.m set expandtab
 autocmd BufEnter *.hs,*.hsc set ts=2 filetype=haskell expandtab comments+=:--
-autocmd BufEnter *.java set ts=2 sw=2 expandtab
+autocmd BufEnter *.java set ts=4 sw=4 noexpandtab
 autocmd BufEnter *.json set expandtab syntax=json foldnestmax=16
 autocmd BufEnter *.json map <F7> <esc>:%!jq .<CR><CR>
 autocmd BufEnter *.jsp set ts=2 sw=2 expandtab
