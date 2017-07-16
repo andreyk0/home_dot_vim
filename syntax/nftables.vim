@@ -12,7 +12,7 @@ endif
 syntax region NFTSet start=/{/ end=/}/ contains=NFTSetEntry
 syntax match NFTSetEntry contained /[a-zA-Z0-9-]\+/
 highlight NFTSet ctermfg=Blue
-highlight NFTSetEntry ctermfg=White
+highlight NFTSetEntry ctermfg=Black
 
 "syntax region NFTTableDef start=/table \S\+ \S\+/ end=// contains=NFTKeyword
 "syntax region NFTChainDef start=/chain / end=/\S\+/ contains=NFTKeyword
