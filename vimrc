@@ -101,6 +101,7 @@ augroup filetype
   au! BufRead,BufNewFile,BufEnter *.sbt setfiletype scala
   au! BufRead,BufNewFile,BufEnter *.scad set filetype=openscad
   au! BufRead,BufNewFile,BufEnter *.go set filetype=go
+  au! BufRead,BufNewFile,BufEnter *.nft set filetype=nftables
 augroup end
 
 autocmd BufRead,BufNewFile,BufEnter *.avdl set filetype=avro-idl
