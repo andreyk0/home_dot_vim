@@ -96,32 +96,30 @@ let g:bufExplorerShowRelativePath=1  " Show relative paths.
 let g:bufExplorerSortBy='name'       " Sort by the buffer's name.
 
 augroup filetype
-  au! BufRead,BufNewFile,BufEnter *.proto setfiletype proto
+  au! BufRead,BufNewFile,BufEnter *.avdl set filetype=avro-idl
+  au! BufRead,BufNewFile,BufEnter Capfile set ts=2 sw=2 expandtab syntax=ruby
+  au! BufRead,BufNewFile,BufEnter *.ftl,*.macro set filetype=ftl noexpandtab
+  au! BufRead,BufNewFile,BufEnter *.go set filetype=go
+  au! BufRead,BufNewFile,BufEnter *.h,*.m set expandtab
+  au! BufRead,BufNewFile,BufEnter *.hs,*.hsc set ts=2 filetype=haskell expandtab comments+=:--
+  au! BufRead,BufNewFile,BufEnter *.java set ts=4 sw=4 noendofline noexpandtab paste
+  au! BufRead,BufNewFile,BufEnter *.json map <F7> <esc>:%!jq .<CR><CR>
+  au! BufRead,BufNewFile,BufEnter *.json set expandtab syntax=json foldnestmax=16
+  au! BufRead,BufNewFile,BufEnter *.jsp set ts=2 sw=2 expandtab
+  au! BufRead,BufNewFile,BufEnter Makefile,makefile set noexpandtab
+  au! BufRead,BufNewFile,BufEnter *.nft,nftables.conf set filetype=nftables expandtab
   au! BufRead,BufNewFile,BufEnter *.ngc setfiletype ngc
+  au! BufRead,BufNewFile,BufEnter *.nxc set filetype=nxc ts=2 sw=2 expandtab
+  au! BufRead,BufNewFile,BufEnter *.proto setfiletype proto
+  au! BufRead,BufNewFile,BufEnter *.rb set ts=2 sw=2 expandtab
   au! BufRead,BufNewFile,BufEnter *.sbt setfiletype scala
   au! BufRead,BufNewFile,BufEnter *.scad set filetype=openscad
-  au! BufRead,BufNewFile,BufEnter *.go set filetype=go
-  au! BufRead,BufNewFile,BufEnter *.nft set filetype=nftables expandtab
-  au! BufRead,BufNewFile,BufEnter nftables.conf set filetype=nftables expandtab
+  au! BufRead,BufNewFile,BufEnter *.scala set ts=2 sw=2 expandtab
+  au! BufRead,BufNewFile,BufEnter *.sql set ts=2 sw=2 expandtab
+  au! BufRead,BufNewFile,BufEnter *.tag set expandtab syntax=xml
+  au! BufRead,BufNewFile,BufEnter *.xml set expandtab
 augroup end
 
-autocmd BufRead,BufNewFile,BufEnter *.avdl set filetype=avro-idl
-autocmd BufRead,BufNewFile,BufEnter *.ftl,*.macro set filetype=ftl noexpandtab
-autocmd BufRead,BufNewFile,BufEnter *.h,*.m set expandtab
-autocmd BufRead,BufNewFile,BufEnter *.hs,*.hsc set ts=2 filetype=haskell expandtab comments+=:--
-autocmd BufRead,BufNewFile,BufEnter *.java set ts=4 sw=4 noendofline noexpandtab paste
-autocmd BufRead,BufNewFile,BufEnter *.json map <F7> <esc>:%!jq .<CR><CR>
-autocmd BufRead,BufNewFile,BufEnter *.json set expandtab syntax=json foldnestmax=16
-autocmd BufRead,BufNewFile,BufEnter *.jsp set ts=2 sw=2 expandtab
-autocmd BufRead,BufNewFile,BufEnter *.nxc set filetype=nxc ts=2 sw=2 expandtab
-autocmd BufRead,BufNewFile,BufEnter *.rb set ts=2 sw=2 expandtab
-autocmd BufRead,BufNewFile,BufEnter *.scala set ts=2 sw=2 expandtab
-autocmd BufRead,BufNewFile,BufEnter *.sql set ts=2 sw=2 expandtab
-autocmd BufRead,BufNewFile,BufEnter *.tag set expandtab syntax=xml
-autocmd BufRead,BufNewFile,BufEnter *.xml set expandtab
-autocmd BufRead,BufNewFile,BufEnter Capfile set ts=2 sw=2 expandtab syntax=ruby
-autocmd BufRead,BufNewFile,BufEnter Makefile set noexpandtab
-autocmd BufRead,BufNewFile,BufEnter makefile set noexpandtab
 
 " Remove trailing whitespace
 autocmd  BufWritePre *.scala,*.rb,*efile,*.hs,*.hsc,*.md :%s/\s\+$//e
